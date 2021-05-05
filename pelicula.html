@@ -32,15 +32,15 @@
                     console.log(peliculas);
 
                     var n = new URLSearchParams(window.location.search).get('nro');
-                    if (n !== null) {
-                        document.querySelector('section').innerHTML = '<h1>' + peliculas[n].title + '</h1><h4>' + peliculas[n].directed_by + ' (' + peliculas[n].year + ')</h4><img src="images/' + peliculas[n].hero_image + '"><p>' + peliculas[n].description + '</p><h3>Trailer</h3><p>Ve el trailer aquí <a href="' + peliculas[n].trailer + '" target="_blank">Youtube</a><p>';
+                    if (n <= 5) {
+                        document.querySelector('section').innerHTML = '<h1>' + peliculas[n].title + '</h1><h4>' + peliculas[n].directed_by + ' (' + peliculas[n].year + ')</h4><img src="images/' + peliculas[n].hero_image + '"><p>' + peliculas[n].description + '</p><br><h3>Trailer</h3><p>Ve el trailer aquí <a href="' + peliculas[n].trailer + '" target="_blank">Youtube</a><p>';
 
                     } else {
-                        document.querySelector('section').innerHTML = '<h1>Lo sentimos este pasillo esta en mantención por un berrinche de Dath Vader</h1><h4>Por favor, vuelva a la <a href="index.html">página principal</a></h4>';
+                        document.querySelector('section').innerHTML = '<h1>Lo sentimos este pasillo esta en mantención </h1><h4> por un berrinche de Dath Vader. </h4><h4> Por favor, vuelva con el siguiente link <a href="peliculas.html"><h3>haz click aquí</h3></a></h4>';
                         document.body.style.backgroundPosition = 'bottom right';
-                        document.body.style.backgroundImage = 'url("images/UPS.png")';
+                        document.body.style.backgroundImage = 'url("images/ups.png")';
                         document.body.style.backgroundRepeat = 'no-repeat';
-                        document.body.style.backgroundSize = 'auto 90%';
+                        document.body.style.backgroundSize = 'auto 60%';
                     }
             }
         });
